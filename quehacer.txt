@@ -1,0 +1,4 @@
+hacer un npm install react react-dom al iniciar para asegurarse de tener todo instalado
+instalar una extensión ES7+ React 
+usar rafc
+import React, { useState } from 'react' (obligatorio recordar)
