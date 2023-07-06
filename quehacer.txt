@@ -1,5 +1,8 @@
 hacer un npm install react react-dom al iniciar para asegurarse de tener todo instalado
 instalar una extensión ES7+ React 
-usar rafc
+usar rafc para generar el react
 import React, { useState } from 'react' (obligatorio recordar, osea en tema de ponerlo cuando haga un archivo)
 no olvidar hacer 'npm run dev' para cargar la página y abrir http://localhost:3000
+
+importnte revisar si esta instalado el "react-router-dom"
+ctrl + s para terminar la ejecución del programa al menos cuando se instala algo.

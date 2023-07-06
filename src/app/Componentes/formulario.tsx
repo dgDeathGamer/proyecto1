@@ -12,7 +12,7 @@ export const Formulario = () => {
             console.log("Nombre:",nombre);
             console.log("Apellido:",apellido);
             console.log("Edad:",edad);
-            alert("Bienvenido"+nombre+" "+apellido+" Edad: "+edad)
+            alert("Bienvenido "+nombre+" "+apellido+" Edad: "+edad)
 
         }else{
             setErrorEdad("la edad debe ser positiva")

@@ -1,16 +1,19 @@
-import {Componente1} from './Componentes'
-import {Formulario} from './formulario'
+'use client'
+import {Componente1} from './Componentes/Componente1'
+import {Formulario} from './Componentes/formulario'
+import { Header } from './Componentes/Header'
+import { AppRouter } from './router/AppRouter'
+import { Footer } from './Componentes/Footer'
 
+import {BrowserRouter} from 'react-router-dom'
 export default function Home() {
   return (
     <>
-      <p>hola mundo</p>
-      <p>Chao mundo</p>
-      <Componente1 nombre="Jose" apellido="Parada"></Componente1>
-
-      <Componente1 nombre="Gabriel"/>
-
-      <Formulario/>
+    <BrowserRouter>
+      <Header/>
+      <AppRouter/>
+      <Footer/>
+    </BrowserRouter>
     </>
   )
 }
