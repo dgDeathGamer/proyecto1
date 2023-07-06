@@ -1,5 +1,5 @@
-import Componente1 from './Componentes'
-import Formulario from './formulario'
+import {Componente1} from './Componentes'
+import {Formulario} from './formulario'
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
 
       <Componente1 nombre="Gabriel"/>
 
-      <Formulario></Formulario>
+      <Formulario/>
     </>
   )
 }
