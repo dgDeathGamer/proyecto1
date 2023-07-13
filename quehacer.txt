@@ -1,4 +1,5 @@
 hacer un npm install react react-dom al iniciar para asegurarse de tener todo instalado
+
 instalar una extensión ES7+ React 
 usar rafc para generar el react
 import React, { useState } from 'react' (obligatorio recordar, osea en tema de ponerlo cuando haga un archivo)
@@ -6,3 +7,28 @@ no olvidar hacer 'npm run dev' para cargar la página y abrir http://localhost:3
 
 importnte revisar si esta instalado el "react-router-dom"
 ctrl + s para terminar la ejecución del programa al menos cuando se instala algo.
+
+
+Usar la primera página creada y convertirla en React
+posiblemente pida un crud
+usar una base de datos
+
+
+
+ir a firebase, iniciar sesión, crear un proyecto. (se puede usar desde el celular la base de datos, como es de google uno se ahorra el iniciar sesión, firebase ocupa una base de datos no relacional.)
+al crear la base de datos y querer añadirlo al proyecto, uno deberá instalarlo
+
+npm install firebase
+
+al hacer un commit a github NO SUBIR EL ARCHIVO "credenciales".
+
+despues borrar:
+export const firebaseConfig = {
+    apiKey: "AIzaSyCqkCQr5NPHDx-IJYgJXNsZ3DP1CDtdPrY",
+    authDomain: "iei2023fe-e93d7.firebaseapp.com",
+    projectId: "iei2023fe-e93d7",
+    storageBucket: "iei2023fe-e93d7.appspot.com",
+    messagingSenderId: "272781748180",
+    appId: "1:272781748180:web:8cc7785ee2876b2b67d841",
+    measurementId: "G-S0MDZ94288"
+};

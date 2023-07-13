@@ -1,11 +1,13 @@
 'use client'
 import React, { useState } from 'react'
+import { Persona } from '../Interface/Interfaces';
+import { registrarPersona } from '../firebase/Promesas';
 
 export const Formulario = () => {
 
-    const [nombre, setNombre] = useState<string>('');
-    const [apellido, setApellido] = useState<string>('');
-    const [edad, setEdad] = useState<number>(0);
+    const [nombre, setNombre] = useState<String>('');
+    const [apellido, setApellido] = useState<String>('');
+    const [edad, setEdad] = useState<Number>(0);
     const [errorEdad, setErrorEdad] = useState("");
     const registrar = ()=>{
         if(edad>0){
@@ -13,7 +15,12 @@ export const Formulario = () => {
             console.log("Apellido:",apellido);
             console.log("Edad:",edad);
             alert("Bienvenido "+nombre+" "+apellido+" Edad: "+edad)
-
+            const p:Persona = { //"const p" es una constante, osea no se repite, es un objeto del tipo "persona".
+                nombre:nombre, 
+                apellido: apellido, 
+                edad:edad
+            }//ahora pasarlo al "DAO"
+            registrarPersona(p)
         }else{
             setErrorEdad("la edad debe ser positiva")
         }
