@@ -17,3 +17,11 @@ export default function Home() {
     </>
   )
 }
+//agregar más cositas dentro del BrowserRouter.
+//en vez de LocalStorage, reemplazarlo por FireBase
+//agregar más cosas en el Header (formulario, registros, etc)
+//3 pasos para crear más cosas en el header, en Componentes crear un archivo.
+//Dentro del archivo poner rafc
+//Dentro de Header poner <Link to={""}></Link>
+//y luego en AppRouter poner <Route path='/' element={< />}/>
+//cambiar los class en classname

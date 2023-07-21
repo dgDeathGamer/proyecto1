@@ -9,10 +9,10 @@ importnte revisar si esta instalado el "react-router-dom"
 ctrl + s para terminar la ejecución del programa al menos cuando se instala algo.
 
 
-Usar la primera página creada y convertirla en React
+Usar la primera página creada y convertirla en React (literalmente)
 posiblemente pida un crud
 usar una base de datos
-
+usar el tema de las secciones para el menú de la página, osea, distintas páginas.
 
 
 ir a firebase, iniciar sesión, crear un proyecto. (se puede usar desde el celular la base de datos, como es de google uno se ahorra el iniciar sesión, firebase ocupa una base de datos no relacional.)

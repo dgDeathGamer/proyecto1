@@ -1,5 +1,6 @@
 export interface Persona{
-    nombre:String,
-    apellido:String,
-    edad:Number
+    nombre:string,
+    apellido:string,
+    edad:number,
+    idPersona?:string, //esto es para que sea opcional la id en una persona.
 }

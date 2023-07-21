@@ -1,13 +1,13 @@
 'use client'
 import React, { useState } from 'react'
 import { Persona } from '../Interface/Interfaces';
-import { registrarPersona } from '../firebase/Promesas';
+import { registrarPersona } from '../Firebase/Promesas';
 
 export const Formulario = () => {
 
-    const [nombre, setNombre] = useState<String>('');
-    const [apellido, setApellido] = useState<String>('');
-    const [edad, setEdad] = useState<Number>(0);
+    const [nombre, setNombre] = useState<string>('');
+    const [apellido, setApellido] = useState<string>('');
+    const [edad, setEdad] = useState<number>(0);
     const [errorEdad, setErrorEdad] = useState("");
     const registrar = ()=>{
         if(edad>0){
