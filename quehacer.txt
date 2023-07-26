@@ -32,3 +32,20 @@ export const firebaseConfig = {
     appId: "1:272781748180:web:8cc7785ee2876b2b67d841",
     measurementId: "G-S0MDZ94288"
 };
+
+para la prueba crear un componente de eliminar, cambiar "actualizarPersona(idPersona)" a eliminarPersona(idPersona).
+crear una carpeta assets/img y luego ver si puedo agregar imagenes.
+
+
+hacer un video, narrar lo que estamos haciendo.
+dura 4 minutos como máximo, puede durar menos, el video debe ser publico incluido github.
+
+implementar appweb con react.
+no ha inclusividad, ajustar tamaño o texto.
+implementar las secciones de la prueba 2, en este caso hay que implementar 4 opciones.
+Home, formulario, registro. (quizás pueda poner info (para lo del terra))
+
+copiar, pegar y adaptar.
+es requisito los 8 campos. (osea, los 8 inputs)
+usar firebase. no usar otra cosa.
+subirlo a hosting, osea buscar en google hosting gratuito. poner en el terminal "npx build"

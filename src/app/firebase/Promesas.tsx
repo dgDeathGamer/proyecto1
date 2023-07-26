@@ -1,5 +1,5 @@
 import { Persona } from "../Interface/Interfaces"
-import { collection, addDoc, getDocs } from "firebase/firestore"; 
+import { collection, addDoc, getDocs, getDoc, updateDoc } from "firebase/firestore"; 
 import { db } from "./Conexion";
 
 export const registrarPersona = async (p:Persona)=>{
@@ -24,3 +24,27 @@ export const Obtenerpersona = async ()=>{
     return listado;
 }
 //esto es muy parecido al DAO, osea recibira la información del formulario y luego eso se podrá enviar a la base de datos.
+
+/*export const obtenerPersona = async(idPersona:string)=>{
+    const docRef = doc(db, "personas", idPersona);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+        const p:Persona = {
+            nombre:docSnap.data().nombre,
+            apellido:docSnap.data().apellido,
+            edad:docSnap.data().edad,
+            idPersona:docSnap.id
+        }
+        return p
+    } else {
+    // docSnap.data() will be undefined in this case
+        return undefined
+    }
+}*/
+export const actualizarPersona = async(idPersona:string,p:Persona)=>{
+    const docRef = doc(db, "personas", idPersona);
+
+// Set the "capital" field of the city 'DC'
+    await updateDoc(docRef, {...p});
+}
