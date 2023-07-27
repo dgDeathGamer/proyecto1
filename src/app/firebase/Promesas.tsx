@@ -42,9 +42,9 @@ export const Obtenerpersona = async ()=>{
         return undefined
     }
 }*/
-export const actualizarPersona = async(idPersona:string,p:Persona)=>{
-    const docRef = doc(db, "personas", idPersona);
-
+//export const actualizarPersona = async(idPersona:string,p:Persona)=>{
+//    const docRef = doc(db, "personas", idPersona);
+//
 // Set the "capital" field of the city 'DC'
-    await updateDoc(docRef, {...p});
-}
+//    await updateDoc(docRef, {...p});
+//}
