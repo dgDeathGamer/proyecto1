@@ -23,6 +23,7 @@ npm install firebase
 al hacer un commit a github NO SUBIR EL ARCHIVO "credenciales".
 
 despues borrar:
+crear en Firebase un Credenciales.tsx y pegar dentro esto.
 export const firebaseConfig = {
     apiKey: "AIzaSyCqkCQr5NPHDx-IJYgJXNsZ3DP1CDtdPrY",
     authDomain: "iei2023fe-e93d7.firebaseapp.com",
@@ -49,3 +50,14 @@ copiar, pegar y adaptar.
 es requisito los 8 campos. (osea, los 8 inputs)
 usar firebase. no usar otra cosa.
 subirlo a hosting, osea buscar en google hosting gratuito. poner en el terminal "npx build"
+
+
+cosas que hacer:
+descubrir como hacer que funcione const [fecha_nac, setFecha_nacimiento] = useState<Date>() ya que al poner (date) da error.
+en el formulario obtenga la fecha_nacimiento, email, n°telefono, servidor(en otras palabras select) y el sexo (uno de los radiobutton.)
+ver como validar la edad de la persona para que tenga una fecha de nacimiento y no una fecha erronea.
+
+Preguntarle al profesor:
+como guardar en la firebase lo del select.
+como guardar el radiobbuton seleccionado en firebase.
+
