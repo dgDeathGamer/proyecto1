@@ -47,7 +47,6 @@ implementar las secciones de la prueba 2, en este caso hay que implementar 4 opc
 Home, formulario, registro. (quizás pueda poner info (para lo del terra))
 
 copiar, pegar y adaptar.
-es requisito los 8 campos. (osea, los 8 inputs)
 usar firebase. no usar otra cosa.
 subirlo a hosting, osea buscar en google hosting gratuito. poner en el terminal "npx build"
 
@@ -56,8 +55,13 @@ cosas que hacer:
 descubrir como hacer que funcione const [fecha_nac, setFecha_nacimiento] = useState<Date>() ya que al poner (date) da error.
 en el formulario obtenga la fecha_nacimiento, email, n°telefono, servidor(en otras palabras select) y el sexo (uno de los radiobutton.)
 ver como validar la edad de la persona para que tenga una fecha de nacimiento y no una fecha erronea.
+poner fondos a cada página.
+ordenar un poco todo.
+finalmente añadir validaciones. en la validación de server que haga que sea distinto a "seleccione un server"
 
 Preguntarle al profesor:
-como guardar en la firebase lo del select.
-como guardar el radiobbuton seleccionado en firebase.
+como hacer funcionar el eliminar.
+
+
+en el video hacer una comparativa en el video de la evalucion 2 y la nueva. (osea, la página. mostrar ambas páginas.)
 

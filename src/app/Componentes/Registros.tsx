@@ -13,6 +13,11 @@ export const Registros = () => {
                 <td>{p.apellido}</td>
                 <td>{p.edad}</td>
                 <td>{p.contrasenia}</td>
+                <td>{p.fecha_nac}</td>
+                <td>{p.email}</td>
+                <td>{p.n_telefono}</td>
+                <td>{p.server}</td>
+                <td>{p.sexo}</td>
                 <td><Link to={"/actualizar/"+p.idPersona}>Actualizar</Link></td>
                 <td><Link to={"/eliminar/"+p.idPersona}>Eliminar</Link></td>
             </tr>
@@ -38,6 +43,11 @@ export const Registros = () => {
             <th>Apellido</th>
             <th>Edad</th>
             <th>Contrasenia</th>
+            <th>Fecha_Nacimiento</th>
+            <th>Correo Electronico</th>
+            <th>Numero de Telefono</th>
+            <th>Servidor</th>
+            <th>Sexo</th>
             <th>Editar</th>
             <th>Eliminar</th>
         </tr>

@@ -9,6 +9,11 @@ export const Actualizar = () => {
     const [apellido, setApellido] = useState("")
     const [edad, setEdad] = useState("")
     const [contrasenia, setContrasenia] = useState("")
+    const [fecha_nac, setFecha_nacimiento] = useState("")
+    const [email, setEmail] = useState("")
+    const [n_telefono, setNumero_Telefono] = useState("")
+    const [server, setServidor] = useState("")
+    const [sexo, SetSexo] = useState("")
     const [errorNombre, setErrorNombre] = useState("")
     const [idPersona, setIdPersona] = useState("")
     useEffect(() => {
@@ -19,7 +24,12 @@ export const Actualizar = () => {
                     setApellido(v.apellido)
                     setEdad("" + v.edad)
                     setContrasenia(v.contrasenia)
+                    setFecha_nacimiento(v.contrasenia)
+                    setNumero_Telefono("" + v.n_telefono)
+                    setEmail(v.email)
+                    setServidor(v.server)
                     setIdPersona(v.idPersona)
+                    SetSexo(v.sexo)
                 }
             })
 
@@ -42,7 +52,12 @@ export const Actualizar = () => {
             nombre,
             apellido,
             edad: parseInt(edad),
-            contrasenia
+            contrasenia,
+            fecha_nac,
+            email,
+            n_telefono: parseInt(n_telefono),
+            server,
+            sexo
         }
         //actualizar
         actualizarPersona(idPersona, p).then(() => {
@@ -85,11 +100,34 @@ export const Actualizar = () => {
                 value={edad}
             /><br />
 
-            <label>Contraseña: </label><br/>
+            <label>Contraseña: </label><br />
             <input type="text"
                 onChange={(e) => setContrasenia(e.target.value)}
                 value={contrasenia}
             /><br />
+
+            <label>Fecha_Nacimiento: </label><br />
+            <input type="Date"
+                onChange={(e) => setFecha_nacimiento(e.target.value)}
+                value={fecha_nac}
+            /><br />
+
+            <label>Servidor: </label>
+            <select
+                onChange={(e) => setServidor(e.target.value)}
+                value={server}><br />
+                <option value="Las">LAS</option>
+                <option value="Lan">LAN</option>
+                <option value="Asia">Asia</option>
+                <option value="EUW">EUW</option>
+                <option value="NA">NA</option>
+            </select><br />
+
+            <label>Sexo:</label><br />
+            <div>
+                <input type="radio" name="sexo" value="hombre" onChange={(e) => SetSexo(e.target.value)}></input><label>hombre</label><br />
+                <input type="radio" name="sexo" value="Mujer" onChange={(e) => SetSexo(e.target.value)}></input><label>Mujer</label><br />
+            </div>
 
             <button type='button' onClick={actualizar}>Actualizar</button>
         </form>

@@ -18,6 +18,11 @@ export const Obtenerpersonas = async ()=>{
         apellido:doc.data().apellido,
         edad:doc.data().edad,
         contrasenia:doc.data().contrasenia,
+        fecha_nac:doc.data().fecha_nac,
+        email:doc.data().email,
+        n_telefono:doc.data().n_telefono,
+        server:doc.data().server,
+        sexo:doc.data().sexo
     }
     listado.push(p)
     console.log(doc.id, " => ", doc.data()); //recuperame el id del documento => luego muestrame los datos.
@@ -36,6 +41,11 @@ export const obtenerPersona = async(idPersona:string)=>{
             apellido:docSnap.data().apellido,
             edad:docSnap.data().edad,
             contrasenia:docSnap.data().contrasenia,
+            fecha_nac:docSnap.data().fecha_nac,
+            email:docSnap.data().email,
+            n_telefono:docSnap.data().n_telefono,
+            server:docSnap.data().server,
+            sexo:docSnap.data().sexo,
             idPersona:docSnap.id
         }
         return p
