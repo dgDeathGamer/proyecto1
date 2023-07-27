@@ -4,8 +4,8 @@ import {Formulario} from './Componentes/formulario'
 import { Header } from './layout/Header'
 import { AppRouter } from './router/AppRouter'
 import { Footer } from './layout/Footer'
-
 import {BrowserRouter} from 'react-router-dom'
+
 export default function Home() {
   return (
     <>

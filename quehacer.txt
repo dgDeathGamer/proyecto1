@@ -34,17 +34,7 @@ export const firebaseConfig = {
     measurementId: "G-S0MDZ94288"
 };
 
-para la prueba crear un componente de eliminar, cambiar "actualizarPersona(idPersona)" a eliminarPersona(idPersona).
 crear una carpeta assets/img y luego ver si puedo agregar imagenes.
-
-
-hacer un video, narrar lo que estamos haciendo.
-dura 4 minutos como máximo, puede durar menos, el video debe ser publico incluido github.
-
-implementar appweb con react.
-no ha inclusividad, ajustar tamaño o texto.
-implementar las secciones de la prueba 2, en este caso hay que implementar 4 opciones.
-Home, formulario, registro. (quizás pueda poner info (para lo del terra))
 
 copiar, pegar y adaptar.
 usar firebase. no usar otra cosa.
@@ -52,16 +42,30 @@ subirlo a hosting, osea buscar en google hosting gratuito. poner en el terminal 
 
 
 cosas que hacer:
-descubrir como hacer que funcione const [fecha_nac, setFecha_nacimiento] = useState<Date>() ya que al poner (date) da error.
-en el formulario obtenga la fecha_nacimiento, email, n°telefono, servidor(en otras palabras select) y el sexo (uno de los radiobutton.)
+validar el nombre de usuario, apellido, tunear la validación de edad,
 ver como validar la edad de la persona para que tenga una fecha de nacimiento y no una fecha erronea.
 poner fondos a cada página.
 ordenar un poco todo.
 finalmente añadir validaciones. en la validación de server que haga que sea distinto a "seleccione un server"
 
-Preguntarle al profesor:
-como hacer funcionar el eliminar.
-
-
 en el video hacer una comparativa en el video de la evalucion 2 y la nueva. (osea, la página. mostrar ambas páginas.)
 
+
+6 secciones.
+Home.
+Que es terraria?.
+imagenes del juego.
+Trailer.
+Formulario.
+Registros.
+
+hosting permite que la app quede en internet.
+
+
+
+
+
+
+para ahcer funcionar el npx next build
+
+debo mover las carpetas dentro de la carpeta componentes a una nueva carpeta dentro de src llamada pages.

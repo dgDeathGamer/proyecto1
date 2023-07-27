@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Persona } from '../Interface/Interfaces';
 import { actualizarPersona, obtenerPersona, eliminarPersona } from '../Firebase/Promesas';
 
-export const Actualizar = () => {
+export const Eliminar = () => {
     const params = useParams()
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
@@ -38,15 +38,13 @@ export const Actualizar = () => {
         //carguemos en cada estado su valor
     }, [])
 
-
-    const actualizar = () => {
+    const eliminar = () => {
 
         if (nombre.trim() == "") {
             setErrorNombre("No valen espacios en blanco")
         } else {
             setNombre(nombre.trim())
         }
-
         //Asuman que se valido todo
         const p: Persona = {
             nombre,
@@ -59,32 +57,18 @@ export const Actualizar = () => {
             server,
             sexo
         }
-        //actualizar
-        actualizarPersona(idPersona, p).then(() => {
-            alert("Se actualizo con exito")
+        //borrar
+        eliminarPersona(idPersona).then(() => {
+            alert("Se ha elimado con exito")
         })
-        //registrarPersona(p)
-        console.log(nombre);
-        console.log(apellido);
-        console.log(edad);
-        alert("Bienvenido " + nombre + " " + apellido);
+        alert("Se ha borrado exitosamente");
     }
-    const validarNombre = (valor: string) => {
-        setNombre(valor);
-        if (valor.length < 3) {
-            setErrorNombre("Debe tener mas de 3 letras")
-        }
-        else {
-            setErrorNombre("")
-        }
-
-
-    }
+    
     return (
         <form>
             <label>Nombre: </label><br />
             <input type="text"
-                onChange={(e) => validarNombre(e.target.value)}
+                onChange={(e) => setNombre(e.target.value)}
                 value={nombre}
             /><br />
             <span>{errorNombre}</span><br />
@@ -116,7 +100,6 @@ export const Actualizar = () => {
             <select
                 onChange={(e) => setServidor(e.target.value)}
                 value={server}><br />
-                <option value="Seleccioneunservidor">Seleccione una opcion</option>
                 <option value="Las">LAS</option>
                 <option value="Lan">LAN</option>
                 <option value="Asia">Asia</option>
@@ -130,7 +113,7 @@ export const Actualizar = () => {
                 <input type="radio" name="sexo" value="Mujer" onChange={(e) => SetSexo(e.target.value)}></input><label>Mujer</label><br />
             </div>
 
-            <button type='button' onClick={actualizar}>Actualizar</button>
+            <button type='button' onClick={eliminar}>Eliminar</button>
         </form>
     )
 }

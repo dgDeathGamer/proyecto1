@@ -5,7 +5,7 @@ import { Componente1 } from '../Componentes/Componente1'
 import { Formulario } from '../Componentes/formulario'
 import { Registros } from '../Componentes/Registros'
 import { Actualizar } from '../Componentes/Actualizar'
-import { Terraria } from '../Componentes/Terraria'
+import { Eliminar } from '../Componentes/Eliminar'
 
 export const AppRouter = () => {
   return (
@@ -13,8 +13,8 @@ export const AppRouter = () => {
         <Route path='/*' element={<Componente1 />}/>
         <Route path='/formulario' element={<Formulario />}/>
         <Route path='/registros' element={<Registros />}/>
-        <Route path='/terraria' element={<Terraria/>}/>
         <Route path='/actualizar/:idPersona' element={<Actualizar/>}/>
+        <Route path='/eliminar/:idPersona' element={<Eliminar/>}/>
 
     </Routes>
   )

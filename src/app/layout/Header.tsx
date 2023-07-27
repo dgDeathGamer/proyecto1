@@ -8,7 +8,6 @@ export const Header = () => {
       <Link to={"/"}>Home</Link>
       <Link to={"/formulario"}>Formulario</Link>
       <Link to={"/registros"}>Registros</Link>
-      <Link to={"/terraria"}>Terraria</Link>
     </nav>
   )
 }
