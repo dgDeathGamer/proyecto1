@@ -42,20 +42,17 @@ subirlo a hosting, osea buscar en google hosting gratuito. poner en el terminal 
 
 
 cosas que hacer:
-validar el nombre de usuario, apellido, tunear la validación de edad,
+tunear la validación de edad.
 ver como validar la edad de la persona para que tenga una fecha de nacimiento y no una fecha erronea.
 poner fondos a cada página.
 ordenar un poco todo.
-finalmente añadir validaciones. en la validación de server que haga que sea distinto a "seleccione un server"
 
 en el video hacer una comparativa en el video de la evalucion 2 y la nueva. (osea, la página. mostrar ambas páginas.)
 
 
-6 secciones.
+4 secciones.
 Home.
 Que es terraria?.
-imagenes del juego.
-Trailer.
 Formulario.
 Registros.
 
@@ -69,3 +66,8 @@ hosting permite que la app quede en internet.
 para ahcer funcionar el npx next build
 
 debo mover las carpetas dentro de la carpeta componentes a una nueva carpeta dentro de src llamada pages.
+
+
+
+mostrarle al profe cada página y hacer una rápida explicacion de la validación tanto en el registrar
+como en el actualizar.

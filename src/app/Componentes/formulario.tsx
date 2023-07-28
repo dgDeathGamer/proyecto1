@@ -111,6 +111,7 @@ export const Formulario = () => {
             <label>Apellido:</label><br />
             <input type='text' onChange={(e) => setApellido(e.target.value)} />
             <span>{errorApellido}</span>
+            <span>{errorvalidacionApellido}</span>
             <br />
 
             <label>Edad:</label><br />

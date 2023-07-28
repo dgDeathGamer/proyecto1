@@ -14,7 +14,27 @@ export const Actualizar = () => {
     const [n_telefono, setNumero_Telefono] = useState("")
     const [server, setServidor] = useState("")
     const [sexo, SetSexo] = useState("")
+
     const [errorNombre, setErrorNombre] = useState("")
+    const [errorvalidacionNombre, setErrorValidarNombre] = useState("")
+
+    const [errorApellido, setErrorApellido] = useState("")
+    const [errorvalidacionApellido, setErrorValidarApellido] = useState("")
+
+    const [errorEdad, setErrorEdad] = useState("")
+
+    const [errorContrasenia, setErrorContrasenia] = useState("")
+
+    const [errorFecha_Nac, setErrorFecha_Nac] = useState("")
+
+    const [errorEmail, setErrorEmail] = useState("")
+
+    const [errorN_Telefono, setErrorN_Telefono] = useState("")
+
+    const [errorServer, setErrorServer] = useState("")
+
+    const [errorSexo, setErrorSexo] = useState("")
+
     const [idPersona, setIdPersona] = useState("")
     useEffect(() => {
         if (params.idPersona != undefined) {
@@ -28,8 +48,8 @@ export const Actualizar = () => {
                     setNumero_Telefono("" + v.n_telefono)
                     setEmail(v.email)
                     setServidor(v.server)
-                    setIdPersona(v.idPersona)
                     SetSexo(v.sexo)
+                    setIdPersona(v.idPersona)
                 }
             })
 
@@ -46,7 +66,6 @@ export const Actualizar = () => {
         } else {
             setNombre(nombre.trim())
         }
-
         //Asuman que se valido todo
         const p: Persona = {
             nombre,
@@ -63,11 +82,6 @@ export const Actualizar = () => {
         actualizarPersona(idPersona, p).then(() => {
             alert("Se actualizo con exito")
         })
-        //registrarPersona(p)
-        console.log(nombre);
-        console.log(apellido);
-        console.log(edad);
-        alert("Bienvenido " + nombre + " " + apellido);
     }
     const validarNombre = (valor: string) => {
         setNombre(valor);
@@ -80,57 +94,86 @@ export const Actualizar = () => {
 
 
     }
-    return (
-        <form>
-            <label>Nombre: </label><br />
-            <input type="text"
-                onChange={(e) => validarNombre(e.target.value)}
-                value={nombre}
-            /><br />
-            <span>{errorNombre}</span><br />
-            <label>Apellido: </label><br />
-            <input type="text"
-                onChange={(e) => setApellido(e.target.value)}
-                value={apellido}
-            /><br />
+return (
+    <form>
+        <label>Nombre: </label><br />
+        <input type='text'
+            onChange={(e) => validarNombre(e.target.value)}
+            value={nombre}
+        />
+        <span>{errorNombre}</span>
+        <span>{errorvalidacionNombre}</span>
+        <br />
 
-            <label>Edad: </label><br />
-            <input type="number"
-                onChange={(e) => setEdad(e.target.value)}
-                value={edad}
-            /><br />
+        <label>Apellido: </label><br />
+        <input type='text'
+            onChange={(e) => setApellido(e.target.value)}
+            value={apellido}
+        />
+        <span>{errorApellido}</span>
+        <span>{errorvalidacionApellido}</span>
+        <br />
 
-            <label>Contraseña: </label><br />
-            <input type="text"
-                onChange={(e) => setContrasenia(e.target.value)}
-                value={contrasenia}
-            /><br />
+        <label>Edad: </label><br />
+        <input type="number"
+            onChange={(e) => setEdad(e.target.value)}
+            value={edad}
+        /><br />
+        <span>{errorEdad}</span>
+        <br />
 
-            <label>Fecha_Nacimiento: </label><br />
-            <input type="Date"
-                onChange={(e) => setFecha_nacimiento(e.target.value)}
-                value={fecha_nac}
-            /><br />
+        <label>Contraseña: </label><br />
+        <input type="text"
+            onChange={(e) => setContrasenia(e.target.value)}
+            value={contrasenia}
+        /><br />
+        <span>{errorContrasenia}</span>
+        <br />
 
-            <label>Servidor: </label>
-            <select
-                onChange={(e) => setServidor(e.target.value)}
-                value={server}><br />
-                <option value="Seleccioneunservidor">Seleccione una opcion</option>
-                <option value="Las">LAS</option>
-                <option value="Lan">LAN</option>
-                <option value="Asia">Asia</option>
-                <option value="EUW">EUW</option>
-                <option value="NA">NA</option>
-            </select><br />
+        <label>Fecha_Nacimiento: </label><br />
+        <input type="Date"
+            onChange={(e) => setFecha_nacimiento(e.target.value)}
+            value={fecha_nac}
+        /><br />
+        <span>{errorFecha_Nac}</span>
+        <br />
 
-            <label>Sexo:</label><br />
-            <div>
-                <input type="radio" name="sexo" value="hombre" onChange={(e) => SetSexo(e.target.value)}></input><label>hombre</label><br />
-                <input type="radio" name="sexo" value="Mujer" onChange={(e) => SetSexo(e.target.value)}></input><label>Mujer</label><br />
-            </div>
+        <label>email</label><br />
+        <input type="email" onChange={(e) => setEmail(e.target.value)}
+            value={email}
+        /><br />
+        <span>{errorEmail}</span>
+        <br />
 
-            <button type='button' onClick={actualizar}>Actualizar</button>
-        </form>
-    )
+        <label>N° Telefono</label><br />
+        <input type='tel' onChange={(e) => setNumero_Telefono(e.target.value)}
+            value={n_telefono}
+        /><br />
+        <span>{errorN_Telefono}</span>
+        <br />
+
+        <label>Servidor: </label>
+        <select
+            onChange={(e) => setServidor(e.target.value)}
+            value={server}><br />
+            <option value="">Seleccione una opcion</option>
+            <option value="Las">LAS</option>
+            <option value="Lan">LAN</option>
+            <option value="Asia">Asia</option>
+            <option value="EUW">EUW</option>
+            <option value="NA">NA</option>
+        </select><br />
+        <span>{errorServer}</span>
+        <br />
+
+        <label>Sexo:</label><br />
+        <span>{errorSexo}</span>
+        <div>
+            <input type="radio" name="sexo" value="hombre" onChange={(e) => SetSexo(e.target.value)}></input><label>hombre</label><br />
+            <input type="radio" name="sexo" value="Mujer" onChange={(e) => SetSexo(e.target.value)}></input><label>Mujer</label><br />
+        </div>
+
+        <button type='button' onClick={actualizar}>Actualizar</button>
+    </form>
+)
 }

@@ -7,9 +7,11 @@ interface Props{
 } //el '?' se pone cuando es opcional
 export const Componente1 = (props:Props) => {
   return (
-    <div className='componente1-fondo'>
-      <p>holaaaa {props.nombre} {props.apellido}</p>
-      <p>Chaoooo</p>
+    <div>
+      <h2>Terraria</h2>
+      <div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/105600/ss_8c03886f214d2108cafca13845533eaa3d87d83f.jpg" alt="terrariamg" width={800}/>
+      </div>
     </div>
   )
 }

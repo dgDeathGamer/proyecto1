@@ -1,3 +1,7 @@
 .componente1-fondo{
-    background-color: red;
+    color: black;
+    background-image: url(https://terraria.org/static/media/background.ea292d81.jpg);
+    display: block;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
 }

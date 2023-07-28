@@ -1,19 +1,21 @@
 'use client'
-import {Componente1} from './Componentes/Componente1'
-import {Formulario} from './Componentes/formulario'
+import { Componente1 } from './Componentes/Componente1'
+import { Formulario } from './Componentes/formulario'
 import { Header } from './layout/Header'
 import { AppRouter } from './router/AppRouter'
 import { Footer } from './layout/Footer'
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 export default function Home() {
   return (
     <>
-    <BrowserRouter>
-      <Header/>
-      <AppRouter/>
-      <Footer/>
-    </BrowserRouter>
+      <body className='componente1-fondo'>
+        <BrowserRouter>
+          <Header />
+          <AppRouter />
+          <Footer />
+        </BrowserRouter>
+      </body>
     </>
   )
 }

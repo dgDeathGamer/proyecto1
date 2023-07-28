@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom'
 export const Header = () => {
   return (
     <nav>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/formulario"}>Formulario</Link>
-      <Link to={"/registros"}>Registros</Link>
+      <Link to={"/"}> Home </Link>
+      <Link to={"/Que_es_terraria"}> Que es terraria? </Link>
+      <Link to={"/formulario"}> Formulario </Link>
+      <Link to={"/registros"}> Registros </Link>
     </nav>
   )
 }
